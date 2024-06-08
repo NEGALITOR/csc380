@@ -1,0 +1,81 @@
+nim.py - Player v Computer
+commpnim.py - Computer v Computer
+
+
+Algorithm
+-----------------------------------------------
+
+
+startGame()
+----------------------------------------------------------------------------------
+In:   piles - The initial pile counts are fed in by user
+Out:  void
+Maintains the logic of the game such as turns and unsafe initial reading
+----------------------------------------------------------------------------------
+
+
+playerTurn()
+----------------------------------------------------------------------------------
+In:   piles - The pile counts are fed in to manipulate the values by the player
+Out:  void
+Performs the players turn
+If the move is not valid (checks with isValidMove()), it will require the user to renter
+Subtracts pile by the numChips
+----------------------------------------------------------------------------------
+
+
+computerTurn()
+----------------------------------------------------------------------------------
+In:   filePointerUnsafe - utilized to traverse the unsafe file
+      piles - The pile counts are fed in to manipulate the values by the player
+      unsafes - list of unsafe combinations
+Out:  
+Manages computer behavior when presented with the pile values
+Writes the sorted unsafes (done in computerMove()) to the unsafe files
+----------------------------------------------------------------------------------
+
+
+isValidMove()
+----------------------------------------------------------------------------------
+In:   piles - The piles and their values
+      pile - pile letter
+      numChips - number taken away from pile
+Out:  True or False whether the amount taken is valid and which pile
+----------------------------------------------------------------------------------
+
+
+checkUnsafe()
+----------------------------------------------------------------------------------
+In:   piles - The piles and their values
+      unsafes - list of all unsafe values
+Out:  the unsafe combinations possible with the current arrangement of the piles
+Compares all possible next unsafes to determine what the next move should be
+----------------------------------------------------------------------------------
+
+
+addUnsafe()
+----------------------------------------------------------------------------------
+In:   piles - The piles and their values
+      unsafes - list of all unsafe values
+Out:  the unsafe combinations possible with the current arrangement of the piles
+Adds previous unsafe if the unsafe does not exist in the unsafes list
+----------------------------------------------------------------------------------
+
+
+computerMove()
+----------------------------------------------------------------------------------
+In:   piles - The initial pile counts are fed in by user
+      unsafeCombos - the unsafe combinations possible with the current arrangement of the piles
+Out:  the move that the computer will perform
+Checks if a move is valid (with isValidMove())
+If there arent any unsafe combos then immediately append to move list
+If unsafe combos exist then predict next moves and check if any of those exist in the unsafecombos
+If not moves are found, cycle through until a valid move appears and perform it
+----------------------------------------------------------------------------------
+
+
+main()
+----------------------------------------------------------------------------------
+Main
+gets input from user and initializes game
+----------------------------------------------------------------------------------

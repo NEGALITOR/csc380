@@ -1,0 +1,38 @@
+Algorithm
+---------------------------------------------------
+
+main()
+- Main
+    - Creates a grid using a lists of lists
+    - Utilize a switch to determine arguments
+    - Asks for user input for num gens and simulates
+
+
+gameOfLife()
+- Start the Game of Life simulation
+    - Gets amount and values of neighbors
+    - Empties and resetting age if cell "dies"
+    - Increment age if conditions are met
+    - Populates and ages if overcrowded
+- Returns the grid
+
+
+neighborCheck()
+- Returns list of neighboring cells for usage in Game of Life
+    - Creates an array of values from the neighbors
+    - Populates with every value around a cell
+- Returns the neighborVal array
+
+
+getState()
+- Reads in the file Grid State
+    - Reads the provided file and removes every space and \n
+    - Sets the grid values based on the chars fed in
+
+
+randomize()
+- Randomizes Grid if no arg is given
+
+
+printGrid()
+- Prints Grid

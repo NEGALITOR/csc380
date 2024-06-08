@@ -1,0 +1,79 @@
+I. 
+    Prolog is short for Programming in Logic.
+    Utilizes facts and logic
+    3 examples: 
+    sunny.
+    father(john, mary).
+    mother(susan, mary).
+
+II.
+    parent(susan, mary).
+        yes
+
+        Susan is the mother of Mary, therefore is also a parent (Rule 2)
+
+    parent(ray, peter).
+        no
+
+        Ray is not a mother nor Father of Peter, therefore is not a parent (Rule 1 and 2)
+
+    yeye(X, peter).
+        X = david ?
+        yes
+
+        David > John > Peter is the lineage. True if X is Peter (Rule 6)
+    gunggung(X, Y).
+        X = jack
+        Y = peter ?
+        yes
+
+        Jack > Susan > Peter is the lineage. True if X is Jack and Y is peter (Rule 8)
+
+III.
+
+    is_in_class(person, class).     /* Fact */
+    is_in_room(class, room).    /* Fact */
+    has_temperature(room, temp).    /* Fact */
+
+    /* Whole Thing is a Rule Below */
+    is_hot(Person) :-   
+        is_in_class(Person, Class),
+        is_in_room(Class, Room),
+        has_temperature(Room, Temp),
+        Temp > 80.
+    /* Whole Thing is a Rule Above */
+
+    /* Atoms */
+    person
+    class
+    room
+    temp
+
+    /* Variables */
+    Person
+    Class
+    Room
+    Temp
+
+    is_in_room(Class, wsc100).
+        Class = csc480 ?
+        yes
+
+        csc480 must be the only one in Class for it to be true
+
+    is_in_class(toby, Class).
+        Class = csc380 ?
+        yes
+
+        Toby is true if Class is csc380 and csc480
+
+    is_hot(Person).
+        Person = toby ?
+        yes
+
+        wsc238 is the only room with a room temp of >80. The class taught in that room is csc380. The only person in that class is toby so that only toby makes it true
+
+    isHot needs variables since it is a Rule. It allows us to check whether a statement is true or false based on the users needs
+
+    Our answers would be different since it allows to find any person with a match to the input.
+

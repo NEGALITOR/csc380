@@ -1,0 +1,34 @@
+1)
+    ?- size([1,2,3,4],N).
+        N = 4
+    ?- sumlist([1,2,3,4],N).
+        N = 10
+    ?- reverse([1,2,3,4],N).
+        N = [4,3,2,1]
+
+2)
+    state(w,w,w,w)
+        Farmer, wolf, goat, cabbage are all on west
+    state(e,w,e,w)
+        Farmer/goat go east while wolf/cabbage stay west
+    state(w,w,e,w)
+        Farmer returns back to west, leaving goat in east
+    state(e,e,e,w)
+        Farmer takes wolf to the east, leaving cabbage only in the west
+    state(w,e,w,w)
+        Farmer and goat move back to the west, leaving wolf in east
+    state(e,e,w,e)
+        Farmer takes cabbage to the east, leaving goat in west
+    state(w,e,w,e)
+        Farmer moves back to west, leaving wolf and cabbage in east
+    state(e,e,e,e)
+        Farmer takes goat to east. All of them are now in the east
+
+3)
+    Backtracking is returning to a previous state when an error or new judgement has been made.
+    cabbage.pl performs backtracking when bad pairings are formed.
+
+4)
+    The problem encompasses a group of couples needing to cross a river. The boat can carry at max 3 at a time.
+    The husbands are "jealous" which do not allow a man to be near their wife unless he is present with her on the same side.
+    Women cannot outnumber the men on either side, since this would mean that a wife is without her husband.

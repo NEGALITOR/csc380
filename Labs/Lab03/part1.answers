@@ -1,0 +1,6 @@
+a) a 9x9 vector <string> Grid to represent the board
+b)  Protected allows for inherited classes to be able to call those particular function to solve complicated sudoku puzzles.
+c) "Grid.size() == 0" and "r == 9" are the base cases
+d) It utilizes recursion to determine if a digit is viable at an empty slot. It checks for the row and column's arrangement of numbers to determine if it is viable for a number. Return a true or false accordingly.
+e) The neural link is implemented so that it can detect and deduce whether a number is valid or invalid in a perticular spot. It is able to create probability distribution for the most likely number for the spot. The AI was trained with 216,000 different puzzles.
+ 
