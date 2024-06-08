@@ -1,1 +1,1 @@
-# csc380
+# Artificial Intelligence
